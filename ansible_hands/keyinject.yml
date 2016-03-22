@@ -1,0 +1,8 @@
+---
+- name: Set up packaging on target hosts
+  hosts: all
+  tasks:
+  - name: copy cleanup
+    copy: src=kolla/cleanup.sh dest=kolla/
+  tags:
+    - packages

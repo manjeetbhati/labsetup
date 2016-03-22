@@ -1,0 +1,34 @@
+- name: Set up packaging on target hosts
+  hosts: all
+  tasks:
+  - name: Install required packages on all hosts
+    apt: name={{item}} state=installed
+    with_items:
+      - ntp
+      - ntpdate
+      - openssh-server
+      - sudo
+      - python-pip
+      - python-dev
+      - libffi-dev
+      - libssl-dev
+      - gcc
+      - git
+  - name: mount /run
+    command: "mount --make-shared /run"
+  tags:
+    - packages
+
+- name: Configure KVM
+  hosts: all
+  tasks:
+  - name: Remove KVM intel Kernel module
+    command: "rmmod kvm-intel"
+  - name: Add dist.conf file if doesn't exist
+    file: path=/etc/modprobe.d/dist.conf state=touch
+  - name: Enable nested virtualization
+    lineinfile: dest=/etc/modprobe.d/dist.conf line="options kvm-intel nested=y"
+  - name: Add the Kernel module back
+    command: "modprobe kvm-intel"
+  tags:
+    - nested_virtualization

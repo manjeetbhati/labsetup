@@ -1,0 +1,6 @@
+---
+- name: Set up packaging on target hosts
+  hosts: all
+  tasks:
+  - name: Install openstackclient
+    copy: src=/home/manjeet/host dest=/etc/hosts
