@@ -1,0 +1,1000 @@
+ 1076  vi port_checks.yml 
+ 1077  cd
+ 1078  glance image-list
+ 1079  cd /etc/host
+ 1080  cd /etc/kolla/
+ 1081  ls
+ 1082  cd
+ 1083  source /etc/kolla/admin-openrc.sh 
+ 1084  glance image-list
+ 1085  ssh manjeet86091
+ 1086  ssh manjeet86098
+ 1087  ssh manjeet86091
+ 1088  ssh manjeet86098
+ 1089  docker ps -a
+ 1090  docker images | wc -l
+ 1091  vi /etc/ansible/hosts 
+ 1092  ssh manjeet86098
+ 1093  tmux
+ 1094  exit
+ 1095  sudo -s
+ 1096  exit
+ 1097  ssh manjeet86098
+ 1098  neutron port-list
+ 1099  source /etc/kolla/admin-openrc.sh 
+ 1100  neutron port-list
+ 1101  neutron port-list | wc -l
+ 1102  vi /etc/kolla/passwords.yml 
+ 1103  vi kolla/ansible/inventory/multinode 
+ 1104  vi /etc/kolla/passwords.yml 
+ 1105  exit
+ 1106  vi /etc/kolla/passwords.yml 
+ 1107  ssh manjeet86098
+ 1108  sudo -s
+ 1109  exit
+ 1110  ls
+ 1111  cd demos/
+ 1112  ls
+ 1113  cd heat/
+ 1114  ls
+ 1115  vi launch 
+ 1116  cd ..
+ 1117  cd heat
+ 1118  ./launch 
+ 1119  source /etc/kolla/admin-openrc.sh 
+ 1120  ./launch 
+ 1121  heat stack-list
+ 1122  vi launch 
+ 1123  neutron net-list | grep "test-subnet" | awk '{print $6}'
+ 1124  vi launch 
+ 1125  heat stack-list
+ 1126  heat stack-delete steak
+ 1127  heat stack-list
+ 1128  ./launch 
+ 1129  heat stack-delete steak
+ 1130  neutron subnet-list | grep "test-subnet" | awk '{print $6}'
+ 1131  neutron subnet-list
+ 1132  neutron subnet-list | grep "test-subnet" | awk '{print $2}'
+ 1133  vi launch 
+ 1134  ./launch 
+ 1135  heat stack-list
+ 1136  heat stack-show steak
+ 1137  heat stack-delete steak
+ 1138  cd
+ 1139  ssh manjeet86091
+ 1140  ./nova_delete.sh 
+ 1141  python
+ 1142  nova list
+ 1143  nova list | wc -l
+ 1144  vi nova_delete.py
+ 1145  chmod a+x nova_delete.
+ 1146  chmod a+x nova_delete.py 
+ 1147  python nova_delete.py 
+ 1148  vi nova_delete.py
+ 1149  python nova_delete.py 
+ 1150  vi nova_delete.py
+ 1151  neutron net-list
+ 1152  echo $OS_USERNAME
+ 1153  echo $OS_PASSWORD
+ 1154  vi nova_delete.py
+ 1155  python nova_delete.py 
+ 1156  vi nova_delete.py
+ 1157  python nova_delete.py 
+ 1158  vi nova_delete.py
+ 1159  vi /etc/kolla/admin-openrc.sh 
+ 1160  vi nova_delete.py
+ 1161  git clone https://github.com/openstack/nova
+ 1162  git clone https://github.com/openstack/python-novaclient
+ 1163  cd python-novaclient/
+ 1164  ls
+ 1165  grep -rni "api_version"
+ 1166  cd
+ 1167  vi nova_delete.
+ 1168  vi nova_delete.py 
+ 1169  cd python-novaclient/
+ 1170  grep -rni "class client"
+ 1171  vi novaclient/v2/client.py
+ 1172  exit
+ 1173  cd kolla/
+ 1174  ls
+ 1175  sudo -s
+ 1176  exit
+ 1177  sudo -s
+ 1178  vi /etc/kolla/passwords.yml 
+ 1179  source /etc/kolla/admin-openrc.sh 
+ 1180  openstack net-ip-availability-list
+ 1181  neutron net-ip-availability-list
+ 1182  nova list
+ 1183  nova delete 
+ 1184  nova help | grep delete
+ 1185  nova delete nova-*
+ 1186  nova list | less
+ 1187  nova list 
+ 1188  vi nova_delete.sh
+ 1189  chmod a+x nova_delete.sh 
+ 1190  cd kolla/
+ 1191  ls
+ 1192  cd tools/
+ 1193  ls
+ 1194  vi init-runonce 
+ 1195  nova list
+ 1196  cd
+ 1197  ./nova_delete.sh 
+ 1198  nova list
+ 1199  ssh manjeet86091
+ 1200  vi kolla/tools/init-runonce 
+ 1201  vi set_quotas.sh
+ 1202  chmod a+x set_quotas.sh 
+ 1203  ./set_quotas.sh 
+ 1204  ssh manjeet86091
+ 1205  vi /etc/kolla/passwords.yml 
+ 1206  cd kolla/
+ 1207  cd tools/
+ 1208  ls
+ 1209  cd ..
+ 1210  cd ansible/
+ 1211  ls
+ 1212  cd ..
+ 1213  tools/kolla-ansible ansible/post-deploy.yml 
+ 1214  tools/kolla-ansible post-deploy
+ 1215  source /etc/kolla/admin-openrc.sh 
+ 1216  vi tools/init-runonce 
+ 1217  tools/init-runonce 
+ 1218  history | grep ansible-all
+ 1219  ansible all -s -m shell -a 'kolla/tools/cleanup-containers'
+ 1220  ansible all -s -m shell -a 'sudo reboot'
+ 1221  ssh manjeet86091
+ 1222  ansible all -s -m shell -a 'ls'
+ 1223  ansible all -s -m shell -a 'mount --make-shared /run'
+ 1224  time tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 1225  ansible all -s -m shell -a 'kolla/tools/cleanup-containers'
+ 1226  time tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1227  time tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 1228  vi /etc/kolla/passwords.yml 
+ 1229  nova list | wc -l
+ 1230  nova list | grep ACTIVE | wc -l
+ 1231  cd 
+ 1232  ./nova_delete.sh 
+ 1233  nova list
+ 1234  nova list | wc -l
+ 1235  nova list | grep ACTIVE | wc -l
+ 1236  nova list | grep BUILD | wc -l
+ 1237  nova list | grep ERROR | wc -l
+ 1238  nova list | grep ACTIVE | wc -l
+ 1239  nova list | less
+ 1240  nova list | awk print #2
+ 1241  nova list | awk print $2
+ 1242  nova list | awk 'print $2'
+ 1243  nova list | awk '{print $2}' | less
+ 1244  nova list
+ 1245  nova list | awk '{print $5}' | less
+ 1246  nova list | awk '{print $4}' | less
+ 1247  nova list | awk '{print $12}' | less
+ 1248  nova list | awk '{print $12}' | wc -l
+ 1249  ./nova_delete.sh 
+ 1250  vi nova_delete.sh 
+ 1251  heat stack-list
+ 1252  ansible all -s -m shell -a 'docker stop horizon'
+ 1253  ansible all -s -m shell -a 'docker start horizon'
+ 1254  ./nova_delete.sh 
+ 1255  vi nova_delete.sh 
+ 1256  nova list > nova_list
+ 1257  vi nova_list 
+ 1258  vi nova_delete.sh 
+ 1259  ./nova_delete.sh 
+ 1260  vi nova_delete.sh 
+ 1261  ./nova_delete.sh 
+ 1262  vi nova_delete.sh 
+ 1263  ./nova_delete.sh 
+ 1264  vi nova_delete.sh 
+ 1265  ./nova_delete.sh 
+ 1266  vi nova_delete.sh 
+ 1267  ./nova_delete.sh 
+ 1268  vi nova_delete.sh 
+ 1269  ./nova_delete.sh 
+ 1270  vi nova_delete.sh 
+ 1271  ./nova_delete.sh 
+ 1272  vi nova_delete.sh 
+ 1273  ./nova_delete.sh 
+ 1274  cat nova_test
+ 1275  ls
+ 1276  cat ./nova_list 
+ 1277  vi nova_delete.sh 
+ 1278  ./nova_delete.sh 
+ 1279  cat ./nova_list 
+ 1280  vi nova_delete.sh 
+ 1281  ./nova_delete.sh 
+ 1282  vi nova_delete.sh 
+ 1283  ./nova_delete.sh 
+ 1284  vi nova_delete.sh 
+ 1285  ./nova_delete.sh 
+ 1286  awk '{print $5}' nova_list 
+ 1287  awk '{print $6}' nova_list 
+ 1288  awk '{print $8}' nova_list 
+ 1289  awk '{print $2}' nova_list 
+ 1290  awk '{print $4}' nova_list 
+ 1291  nova delete `awk '{print $2}' nova_list` 
+ 1292  nova list | awk '$2 && $2 != "ID" {print $2}' | xargs -n1 nova delete
+ 1293  nova delete `awk '{print $2}' nova_list` 
+ 1294  rm nova_list
+ 1295  nova list > nova_list
+ 1296  nova delete `awk '{print $2}' nova_list` 
+ 1297  q1q
+ 1298  neutron net-ip-availability-list
+ 1299  source /etc/kolla/admin-openrc.sh 
+ 1300  neutron net-ip-availability-list
+ 1301  vi /etc/kolla/passwords.yml 
+ 1302  ls
+ 1303  ./nova_delete.sh 
+ 1304  sudo -s
+ 1305  ./nova_delete.sh 
+ 1306  source /etc/kolla/admin-openrc.sh 
+ 1307  ./nova_delete.sh 
+ 1308  vi /etc/kolla/passwords.yml 
+ 1309  nova list 
+ 1310  ./nova_delete.sh 
+ 1311  cd kolla/
+ 1312  ls
+ 1313  cd ansible/
+ 1314  ls
+ 1315  cd roles/
+ 1316  ls
+ 1317  cd m
+ 1318  cd mariadb/
+ 1319  ls
+ 1320  cd templates/
+ 1321  ls
+ 1322  vi mariadb.json.j2 
+ 1323  vi galera.cnf.j2 
+ 1324  cd
+ 1325  cd kolla/tools/
+ 1326  ls
+ 1327  cd ..
+ 1328  time tools/kolla-ansible reconfigure
+ 1329  vi ansible/inventory/multinode 
+ 1330  time tools/kolla-ansible -i ansible/inventory/multinode reconfigure
+ 1331  cd
+ 1332  vi /etc/ansible/hosts 
+ 1333  ansible all -s -m shell -a 'kolla/tools/cleanup-containers'
+ 1334  vi /etc/ansible/hosts 
+ 1335  ansible all -s -m shell -a 'kolla/tools/cleanup-images'
+ 1336  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1337  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 1338  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1339  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 1340  ansible all -s -m shell -a 'kolla/tools/cleanup-host'
+ 1341  cd kolla/
+ 1342  ansible all -s -m shell -a 'sudo reboot'
+ 1343  vi tools/cleanup-host 
+ 1344  ssh manjeet86091
+ 1345  ssh manjeet86092
+ 1346  ssh manjeet86094
+ 1347  ansible all -s -m shell -a 'ls'
+ 1348  tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 1349  time tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 1350  ssh manjeet86091
+ 1351  ssh manjeet86098
+ 1352  ssh manjeet86099
+ 1353  ssh manjeet86100
+ 1354  vi /etc/kolla/passwords.yml 
+ 1355  tools/kolla-ansible post-deploy
+ 1356  source /etc/kolla/admin-openrc.sh 
+ 1357  ls
+ 1358  vi tools/init-runonce 
+ 1359  tools/init-runonce 
+ 1360  neutron net-ip-availability-list
+ 1361  vi tools/init-runonce 
+ 1362  vi history
+ 1363  history > grep "openstack role"
+ 1364  history | grep "openstack role"
+ 1365  openstack role-create _member_
+ 1366  openstack role create _member_
+ 1367  neutron port-list
+ 1368  ssh manjeet86091
+ 1369  vi /etc/kolla/passwords.yml 
+ 1370  ssh manjeet86091\
+ 1371  ssh manjeet86091
+ 1372  vi /etc/ansible/hosts 
+ 1373  ansible all -s -m shell -a 'docker stop horizon'
+ 1374  ansible all -s -m shell -a 'docker start horizon'
+ 1375  neutron net-list | grep "test-net"
+ 1376  cd
+ 1377  ls
+ 1378  heat
+ 1379  source /etc/kolla/admin-openrc.sh 
+ 1380  heat help | grep create
+ 1381  heat stack-create
+ 1382  cd kolla/tools/
+ 1383  ls
+ 1384  cd ..
+ 1385  cd ansible/
+ 1386  l;s
+ 1387  ls
+ 1388  cd roles/
+ 1389  ls
+ 1390  cd heat/
+ 1391  ls
+ 1392  cd templates/
+ 1393  ls
+ 1394  vi _deprecated.yaml 
+ 1395  cd ..
+ 1396  ls
+ 1397  cd tasks/
+ 1398  ls
+ 1399  cd ..
+ 1400  ls
+ 1401  cd ..
+ 1402  cd tools/
+ 1403  ls
+ 1404  cd ..
+ 1405  ls
+ 1406  cd ansible/
+ 1407  ls
+ 1408  cd roles/
+ 1409  ls
+ 1410  cd heat/
+ 1411  ls
+ 1412  cd defaults/
+ 1413  ls
+ 1414  cd ..
+ 1415  cd tasks/
+ 1416  ls
+ 1417  cd
+ 1418  cat history | grep launch
+ 1419  history | grep launch
+ 1420  histroy > his
+ 1421  history > his
+ 1422  vi his
+ 1423  cd kolla/
+ 1424  ls
+ 1425  cd de
+ 1426  cd demos/
+ 1427  ls
+ 1428  cd heat/
+ 1429  ls
+ 1430  vi launch 
+ 1431  vi steak-rg.yaml 
+ 1432  cd
+ 1433  ssh manjeet86091
+ 1434  cd kolla/demos/
+ 1435  ls
+ 1436  cd heat/
+ 1437  vi launch 
+ 1438  ./launch 
+ 1439  heat stack-list
+ 1440  heat stack-show steak
+ 1441  vi launch 
+ 1442  vi steak-rg.yaml 
+ 1443  heat stack-list
+ 1444  heat stack-delete steak
+ 1445  heat stack-list
+ 1446  ./launch 
+ 1447  vi launch 
+ 1448  ./launch 
+ 1449  heat stack-show steak
+ 1450  vi launch 
+ 1451  ls
+ 1452  cd
+ 1453  ansible all -s -m shell -a ''s
+ 1454  vi /etc/ansible/hosts 
+ 1455  ansible all -s -m shell -a 'ls'
+ 1456  ls
+ 1457  ansible all -s -m shell -a 'kolla/tools/cleanup-containers'
+ 1458  ansible all -s -m shell -a 'kolla/tools/cleanup-host'
+ 1459  vi /etc/ansible/hosts 
+ 1460  ansible all -s -m shell -a 'sudo reboot'
+ 1461  ssh manjeet86091
+ 1462  iperf
+ 1463  apt-get install iperf
+ 1464  iperf -s
+ 1465  ansible all -s -m shell -a 'mount --make-shared /run'
+ 1466  cd kolla/
+ 1467  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1468  time tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 1469  time tools/kolla-ansible post-deploy
+ 1470  source /etc/kolla/admin-openrc.sh 
+ 1471  time nova list
+ 1472  neutron net-list
+ 1473  time neutron net-list
+ 1474  vi tools/init-runonce 
+ 1475  tools/init-runonce 
+ 1476  neutron net-ip-availability
+ 1477  neutron net-ip-availability-list
+ 1478  cd
+ 1479  mkdir test
+ 1480  cd test/
+ 1481  git clone https://github.com/openstack/kolla
+ 1482  cd kolla/
+ 1483  cd
+ 1484  cd kolla/
+ 1485  cd em
+ 1486  cd demos/
+ 1487  ls
+ 1488  git diff heat/
+ 1489  git status
+ 1490  cd
+ 1491  cd kolla/demos/
+ 1492  ls
+ 1493  cd heat/
+ 1494  ls
+ 1495  cd
+ 1496  cd ..
+ 1497  cd
+ 1498  cd kolla/demos/
+ 1499  rm -rf heat
+ 1500  cd
+ 1501  cp -r test/kolla/demos/heat/ kolla/demos/
+ 1502  cd kolla/
+ 1503  git status
+ 1504  vi grep
+ 1505  rm grep
+ 1506  cd demos/
+ 1507  ls
+ 1508  cd heat/
+ 1509  ls
+ 1510  vi launch 
+ 1511  ./launch 
+ 1512  heat stack list
+ 1513  heat stack-list
+ 1514  heat stack-show steak
+ 1515  vi steak.yaml 
+ 1516  vi launch 
+ 1517  vi steak.yaml 
+ 1518  cp steak.yaml  steak_old.yaml
+ 1519  vi steak.yaml 
+ 1520  ./launch 
+ 1521  heat stack-delete steak
+ 1522  neutron net-list
+ 1523  heat stack-list
+ 1524  ./launch 
+ 1525  vi steak.yaml 
+ 1526  vi steak-rg.yaml 
+ 1527  vi steak.yaml 
+ 1528  rm steak.yaml 
+ 1529  cp steak_old.yaml steak.yaml
+ 1530  ./launch 
+ 1531  nova list
+ 1532  heat stack-list
+ 1533  heat stack-show stack
+ 1534  heat stack-show steak
+ 1535  vi steak.yaml 
+ 1536  heat stack-delete steak
+ 1537  heat stack-list
+ 1538  ./launch 
+ 1539  heat stack-list
+ 1540  heat stack-show steak
+ 1541  vi steak.yaml 
+ 1542  heat stack-list
+ 1543  heat stack-delete steak
+ 1544  ./launch 
+ 1545  heat stack-list
+ 1546  nova list
+ 1547  heat stack-list
+ 1548  heat stack-show steak
+ 1549  nova list
+ 1550  heat stack-delete steak
+ 1551  heat stack-list
+ 1552  cd ../..
+ 1553  vi tools/init-runonce 
+ 1554  vi /etc/kolla/passwords.yml 
+ 1555  nova list
+ 1556  nova list | grep ACTIVE 
+ 1557  nova list | grep ACTIVE | wc -l
+ 1558  nova list | grep ERROR | wc -l
+ 1559  nova list | grep ACTIVE | wc -l
+ 1560  nova list
+ 1561  openstack create role _member_
+ 1562  openstack role create _member
+ 1563  cd dmeo
+ 1564  neutron net-list
+ 1565  neutron subnet-list
+ 1566  cd demos/heat/
+ 1567  ls
+ 1568  vi launch 
+ 1569  ./launch 
+ 1570  heat stack-list
+ 1571  heat stack-delete steak
+ 1572  heat stack-list
+ 1573  nova list | grep ACTIVE | wc -l
+ 1574  Vi handy_commands
+ 1575  vi handy_commands
+ 1576  vi handy_commands.rst
+ 1577  nova list | grep ACTIVE | wc -l
+ 1578  nova list | grep ERROR | wc -l
+ 1579  nova list | wc -l
+ 1580  nova list
+ 1581  vi /etc/kolla/passwords.yml 
+ 1582  nova list
+ 1583  nova list | wc -l
+ 1584  nova list | grep ACTIVE | wc -l
+ 1585  nova list | grep BUILD | wc -l
+ 1586  nova list | grep ERROR | wc -l
+ 1587  nova list | grep ACTIVE | wc -l
+ 1588  nova list | grep ERROR | wc -l
+ 1589  nova list | grep ACTIVE | wc -l
+ 1590  nova list
+ 1591  neutron port-list | grep ip | wc -l
+ 1592  nova list | less
+ 1593  cd
+ 1594  nova list > nova_list
+ 1595  vi nova_list 
+ 1596  ls
+ 1597  vi his
+ 1598  nova delete `awk '{print $2}' nova_list`
+ 1599  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1600  ansible all -s -m shell -a 'kolla/tools/cleanup-containers'
+ 1601  ansible all -s -m shell -a 'sudo reboot'
+ 1602  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1603  ansible all -s -m shell -a 'sudo reboot'
+ 1604  sleep 500 && ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1605  ansible all -s -m shell -a 'mount --make-shared /run'
+ 1606  cd kolla/
+ 1607  ls
+ 1608  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1609  ansible all -s -m shell -a 'service libvirt-bin stop'
+ 1610  ansible all -s -m shell -a 'update-rc.d libvirt-bin disable'
+ 1611  ssh manjeet86094
+ 1612  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 1613  ansible all -s -m shell -a 'sudo reboot'
+ 1614  ansible all -s -m shell -a 'ls'
+ 1615  ansible all -s -m shell -a 'mount --make-shared /run'
+ 1616  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1617  ssh manjeet86091
+ 1618  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1619  ansible all -s -m shell -a 'service libvirt-bin stop'
+ 1620  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1621  ssh manjeeet86153
+ 1622  ls
+ 1623  ps aux | grep libvirt
+ 1624  docker images
+ 1625  docker stop nova_libvirt
+ 1626  ssh manjeeet86153
+ 1627  ssh manjeeet86152
+ 1628  ssh manjeet86153
+ 1629  vi /etc/ansible/hosts 
+ 1630  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 1631  ansible all -s -m shell -a 'ps aux | grep libvirt'
+ 1632  ssh manjeet86153
+ 1633  ansible all -s -m shell -a 'mount --make-shared /run'
+ 1634  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1635  ssh manjeet86095
+ 1636  ssh manjeet86096
+ 1637  ssh manjeet86097
+ 1638  vi /etc/ansible/hosts 
+ 1639  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 1640  vi /etc/ansible/hosts 
+ 1641  ansible all -s -m shell -a 'mount --make-shared /run'
+ 1642  ansible all -s -m shell -a ''
+ 1643  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1644  time tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 1645  time tools/kolla-ansible post-deploy
+ 1646  source /etc/kolla/admin-openrc.sh 
+ 1647  vi /etc/kolla/passwords.yml 
+ 1648  ls
+ 1649  mysql -hmanjeet86091 -uroot -pPDGEQ2AyHg9zA1aROJLlI1GRzjpWdGrxduTXQa6I 
+ 1650  cd
+ 1651  ls
+ 1652  vi bc.sql
+ 1653  chmod a+x bc.sql 
+ 1654  ls
+ 1655  vi /etc/kolla/passwords.yml 
+ 1656  openstack role create _member_
+ 1657  neutron net-list
+ 1658  cd kolla/tools/
+ 1659  vi init-runonce 
+ 1660  neutron net-ip-availability-list
+ 1661  vi init-runonce 
+ 1662  vi set_image.sh
+ 1663  vi init-runonce 
+ 1664  chmod a+x set_image.sh 
+ 1665  ./set_image.sh 
+ 1666  nova list
+ 1667  nova list | grep ACTIVE | wc -l
+ 1668  nova list | grep ERROR | wc -l
+ 1669  nova list
+ 1670  nova list | grep ACTIVE | wc -l
+ 1671  nova list | grep BUILD | wc -l
+ 1672  nova list | grep ERROR | wc -l
+ 1673  nova list | grep ACTIVE | wc -l
+ 1674  nova list | grep BUILD | wc -l
+ 1675  nova list
+ 1676  nova list | grep ACTIVE | wc -l
+ 1677  nova list | grep ERROR | wc -l
+ 1678  nova list | grep BUILD | wc -l
+ 1679  nova list | grep ACTIVE | wc -l
+ 1680  nova list | grep ERROR | wc -l
+ 1681  nova list | grep ACTIVE | wc -l
+ 1682  nova list | grep ERROR | wc -l
+ 1683  nova list | grep ACTIVE | wc -l
+ 1684  nova list | grep ERROR | wc -l
+ 1685  nova list | grep ACTIVE | wc -l
+ 1686  nova list
+ 1687  nova list | less
+ 1688  nova list | grep ACTIVE | wc -l
+ 1689  nova list | wc -l
+ 1690  nova list | less
+ 1691  nova list | wc -l
+ 1692  nova list
+ 1693  nova list | wc -l
+ 1694  git status
+ 1695  vi ../ansible/roles/mariadb/templates/galera.cnf.j2
+ 1696  time
+ 1697  nova list | wc -l
+ 1698  nova list
+ 1699  nova list | wc -l
+ 1700  nova list | grep ACTIVE | wc -l
+ 1701  exit
+ 1702  sudo -s
+ 1703  exit
+ 1704  ls
+ 1705  cd
+ 1706  ssh manjeet86091
+ 1707  ssh manjeet86092
+ 1708  ssh manjeet86093
+ 1709  ssh manjeet86091
+ 1710  ssh manjeet86092
+ 1711  ls
+ 1712  ssh manjeet86091
+ 1713  mysql -hmanjeet86091 -uroot -pPDGEQ2AyHg9zA1aROJLlI1GRzjpWdGrxduTXQa6I < bc.sql 
+ 1714  mysql -hmanjeet86091 -uroot -pPDGEQ2AyHg9zA1aROJLlI1GRzjpWdGrxduTXQa6I < bc.sql | wc -l
+ 1715  watch -d 'mysql -hmanjeet86091 -uroot -pPDGEQ2AyHg9zA1aROJLlI1GRzjpWdGrxduTXQa6I < bc.sql | wc -l'
+ 1716  docker exec -ti -u=root mariadb bash
+ 1717  ssh manjeet86091
+ 1718  exit
+ 1719  ssh manjeet86093
+ 1720  sudo -s
+ 1721  exit
+ 1722  vi /etc/kolla/passwords.yml 
+ 1723  history
+ 1724  history | less
+ 1725  ls
+ 1726  sudo -s
+ 1727  vi /etc/kolla/passwords.yml 
+ 1728  iperf -c manjeet86089
+ 1729  ssh manjeet86091
+ 1730  ssh manjeet86092
+ 1731  ls
+ 1732  vi /etc/kolla/passwords.yml 
+ 1733  ssh manjeet86091
+ 1734  ssh manjeet86092
+ 1735  ls
+ 1736  ssh manjeet86092
+ 1737  udo -s
+ 1738  exit
+ 1739  vi /etc/kolla/passwords.yml 
+ 1740  history
+ 1741  history | less
+ 1742  ls
+ 1743  sudo -s
+ 1744  vi /etc/kolla/passwords.yml 
+ 1745  nova list
+ 1746  source /etc/kolla/admin-openrc.sh 
+ 1747  nova list
+ 1748  source /etc/kolla/admin-openrc.sh | wc -l
+ 1749  nova list | wc -l
+ 1750  nova help | grep quota 
+ 1751  nova quota-update
+ 1752  nova quota-show
+ 1753  nova quota-update --server-groups 10000
+ 1754  nova quota-update --server-groups 10000 admin
+ 1755  nova quota-show
+ 1756  nova quota-update --server-groups 1000 admin
+ 1757  nova quota-show
+ 1758  nova list | wc -l
+ 1759  mysql -hmanjeet86091 -uroot -pPDGEQ2AyHg9zA1aROJLlI1GRzjpWdGrxduTXQa6I
+ 1760  mysql -uroot -pPDGEQ2AyHg9zA1aROJLlI1GRzjpWdGrxduTXQa6I
+ 1761  ssh manjeet86091
+ 1762  sudo -s
+ 1763  source /etc/kolla/admin-openrc.sh 
+ 1764  nova list | wc -l
+ 1765  nova list
+ 1766  source /etc/kolla/admin-openrc.sh 
+ 1767  nova list
+ 1768  nova list | awk '{print $2}'
+ 1769  nova list | awk '{print $2}' > nova_id
+ 1770  vi nova_id 
+ 1771  history
+ 1772  vi his 
+ 1773  awk '{print $1}' nova_list
+ 1774  awk '{print $0}' nova_list
+ 1775  awk '{print $0}' nova_id
+ 1776  nova delete `awk '{print $0}' nova_id`
+ 1777  nova list | wc -l
+ 1778  cd /etc/kolla/
+ 1779  ls
+ 1780  cd ..
+ 1781  cd 
+ 1782  ssh manjeet86091
+ 1783  vi /etc/kolla/config
+ 1784  vi /etc/kolla/config/nova.conf
+ 1785  cd /etc/kolla/
+ 1786  ls
+ 1787  mkdir config
+ 1788  cd config/
+ 1789  vi nova.conf
+ 1790  source /etc/kolla/admin-openrc.sh 
+ 1791  nova list -hhelp
+ 1792  nova list -help
+ 1793  nova list | wc -l
+ 1794  rm nova_list 
+ 1795  sudo -s
+ 1796  ssh manjeet86091
+ 1797  ssh manjeet86092
+ 1798  ssh manjeet86091
+ 1799  ssh manjeet86093
+ 1800  ssh manjeet86092
+ 1801  ssh manjeet86091
+ 1802  vi /etc/kolla/config/nova.conf
+ 1803  rm /etc/kolla/config/nova.conf
+ 1804  vi /etc/kolla/config/nova.conf
+ 1805  cd kolla/
+ 1806  tools/kolla-ansible reconfigure
+ 1807  history
+ 1808  history > 999
+ 1809  vi 999 
+ 1810  vi /etc/ansible/hosts 
+ 1811  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 1812  tools/kolla-ansible reconfigure
+ 1813  ansible all -s -m shell -a 'kolla/tools/cleanup-containers'
+ 1814  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1815  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 1816  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1817  ansible all -s -m shell -a 'kolla/tools/cleanup-host'
+ 1818  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1819  ansible all -s -m shell -a 'sudo reboot' && sleep 300 && ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1820  ansible all -s -m shell -a 'mount --make-shared /run'
+ 1821  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1822  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 1823  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1824  ssh manjeet86094
+ 1825  ansible all -s -m shell -a 'service libvirt-bin stop'
+ 1826  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 1827  tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 1828  time tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 1829  cd
+ 1830  ssh manjeet86089
+ 1831  ssh manjeet86091
+ 1832  vi /etc/kolla/passwords.yml 
+ 1833  cd kolla/
+ 1834  tools/kolla-ansible post-deploy
+ 1835  source /etc/kolla/admin-openrc.sh 
+ 1836  openstack role create _member_
+ 1837  cd
+ 1838  ls
+ 1839  cd
+ 1840  cd kolla/
+ 1841  git status
+ 1842  vi tools/set_image.sh 
+ 1843  cd tools/
+ 1844  ./set_image.sh 
+ 1845  nova list
+ 1846  nova boot
+ 1847  nova boot --flavor m1.tiny 
+ 1848  nova image-list
+ 1849  nova boot --flavor m1.tiny  --image cirros --nic net-id=806f7801-dfce-4aa2-8ed7-cb4b43034095 --security-groups default --max-count 10
+ 1850  nova help boot
+ 1851  nova boot --flavor m1.tiny  --image cirros --nic net-id=806f7801-dfce-4aa2-8ed7-cb4b43034095 --security-groups default --max-count 10 nova
+ 1852  nova list | grep ACTIVE | wc -l
+ 1853  time nova boot --flavor m1.tiny  --image cirros --nic net-id=806f7801-dfce-4aa2-8ed7-cb4b43034095 --security-groups default --max-count 10 nova
+ 1854  nova list
+ 1855  ls
+ 1856  cd
+ 1857  vi nova_delete
+ 1858  vi nova_delete.sh
+ 1859  vi his
+ 1860  vi nova_delete.sh
+ 1861  vi nova_list
+ 1862  time nova boot --flavor m1.tiny  --image cirros --nic net-id=806f7801-dfce-4aa2-8ed7-cb4b43034095 --security-groups default --max-count 100 nova
+ 1863  nova list
+ 1864  nova list | grep ERROR | wc -l
+ 1865  nova list | grep ACTIVE | wc -l
+ 1866  mv nova_list nova_list_2
+ 1867  nova list > nova_list
+ 1868  ./nova_delete.sh
+ 1869  vi nova_delete.sh
+ 1870  ./nova_delete.sh
+ 1871  vi nova_delete.sh
+ 1872  nova list
+ 1873  time nova boot --flavor m1.tiny  --image cirros --nic net-id=806f7801-dfce-4aa2-8ed7-cb4b43034095 --security-groups default --max-count 200 nova
+ 1874  nova list | grep ERROR | wc -l
+ 1875  nova list | grep ACTIVE | wc -l
+ 1876  nova list | grep ERROR | wc -l
+ 1877  nova list | grep ACTIVE | wc -l
+ 1878  nova list
+ 1879  nova list | grep ACTIVE | wc -l
+ 1880  nova list | grep ERROR | wc -l
+ 1881  nova list 
+ 1882  ssh manjeet86122
+ 1883  ssh manjeet86091
+ 1884  cd
+ 1885  sudo -s
+ 1886  sudo -s
+ 1887  vi /etc/kolla/config/nova.conf 
+ 1888  nova list
+ 1889  source /etc/kolla/admin-openrc.sh 
+ 1890  nova list
+ 1891  nova list | wc -l
+ 1892  cd kolla/
+ 1893  cd
+ 1894  vi /etc/kolla/config/
+ 1895  ssh manjeet86091
+ 1896  ssh manjeet86092
+ 1897  ssh manjeet86093
+ 1898  vi /etc/kolla/config/nova.conf
+ 1899  source /etc/kolla/admin-openrc.sh 
+ 1900  neutron net-list
+ 1901  vi /etc/kolla/passwords.yml 
+ 1902  ssh manjeet86098
+ 1903  ssh manjeet86099
+ 1904  vi /etc/kolla/globals.yml 
+ 1905  vi /etc/kolla/passwords.yml 
+ 1906  vi /etc/kolla/config/nova.conf 
+ 1907  -n1 nova delete
+ 1908  vi /etc/kolla/passwords.yml 
+ 1909  ssh manjeet86091
+ 1910  vi /etc/kolla/passwords.yml 
+ 1911  ssh manjeet86091
+ 1912  vi /etc/ansible/hosts 
+ 1913  ansible all -s -m shell -a 'ls'
+ 1914  cd kolla/
+ 1915  vi ansible/inventory/multinode 
+ 1916  vi /etc/hosts
+ 1917  cd
+ 1918  ls
+ 1919  vi get_me_mac.sh 
+ 1920  ./get_me_mac.sh > test1
+ 1921  vi tes1
+ 1922  vi get_me_mac.sh 
+ 1923  vi test1
+ 1924  vi install.yml 
+ 1925  ls
+ 1926  vi /etc/kolla/passwords.yml 
+ 1927  vi /etc/hosts
+ 1928  cp /etc/hosts kolla/
+ 1929  sudo cp /etc/hosts kolla/
+ 1930  cd kolla/
+ 1931  vi hosts 
+ 1932  vi host
+ 1933  cd
+ 1934  sudo -s
+ 1935  vi host
+ 1936  source /etc/kolla/admin-openrc.sh 
+ 1937  nova list
+ 1938  nova list | grep error | wc -l
+ 1939  nova list | grep ACTIVE | wc -l
+ 1940  nova list | grep ERROR | awk '{print $2}' > l1
+ 1941  vi l1 
+ 1942  history
+ 1943  ls
+ 1944  vi 999
+ 1945  cat history | grep "nova delete"
+ 1946  history | grep "nova delete"
+ 1947  nova delete `awk '{print $0}' l1` &
+ 1948  nova list
+ 1949  nova list | grep ERROR | wc -l
+ 1950  nova list | awk '$2 && $2 != "ID" {print $2}' | xargs -n1 nova delete &
+ 1951  ls
+ 1952  source /etc/kolla/admin-openrc.sh 
+ 1953  nova list
+ 1954  nova list | wc -l
+ 1955  vi /etc/kolla/passwords.yml 
+ 1956  df
+ 1957  df -H
+ 1958  nova list | awk '$2 && $2 != "ID" {print $2}' | xargs -n1 nova delete &
+ 1959  ls
+ 1960  hponcfg
+ 1961  dmidecode
+ 1962  sudo -s
+ 1963  dmidecode
+ 1964  hponc
+ 1965  hponcfg -w ilo_.out
+ 1966  /etc/init.d/hp-ilo start
+ 1967  vi /etc/init.d/ipmievd 
+ 1968  lxc -sl
+ 1969  lxc-ls
+ 1970  lxc
+ 1971  lxc-attach rpc-prep
+ 1972  lxc-attach -n rpc-prep
+ 1973  ls
+ 1974  nova list
+ 1975  source /etc/kolla/admin-openrc.sh 
+ 1976  nova list
+ 1977  lxc-attach -n rpc-prep
+ 1978  vgs
+ 1979  df
+ 1980  nova list
+ 1981  ps aux | grep nova
+ 1982  kill -9 26152 
+ 1983  ps aux | grep nova
+ 1984  ls
+ 1985  history | grep ansible-all
+ 1986  vi his
+ 1987  vi /etc/ansible/hosts 
+ 1988  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 1989  ansible all -s -m shell -a 'kolla/tools/cleanup-containers'
+ 1990  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1991  ansible all -s -m shell -a 'sudo reboot'
+ 1992  ansible all -s -m shell -a 'ls'
+ 1993  ssh manjeet86091
+ 1994  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 1995  ansible all -s -m shell -a 'kolla/tools/cleanup-host'
+ 1996  vi /etc/ansible/hosts 
+ 1997  ansible all -s -m shell -a 'kolla/tools/cleanup-images'
+ 1998  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 1999  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 2000  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2001  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 2002  ansible all -s -m shell -a 'kolla/tools/cleanup-images'
+ 2003  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2004  ansible all -s -m shell -a 'mount --make-shared /run'
+ 2005  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2006  ansible all -s -m shell -a 'service docker restart'
+ 2007  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2008  ansible all -s -m shell -a 'service docker stop'
+ 2009  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2010  ansible all -s -m shell -a 'service docker start'
+ 2011  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2012  ansible all -s -m shell -a 'docker ps -a'
+ 2013  ansible all -s -m shell -a 'docker stop *'
+ 2014  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 2015  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2016  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 2017  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2018  ansible all -s -m shell -a 'docker ps -a'
+ 2019  ansible all -s -m shell -a 'docker stop all'
+ 2020* ansible all -s -m shell -a 'dock'
+ 2021  ansible all -s -m shell -a 'kolla/tools/cleanup-images -f'
+ 2022  ansible all -s -m shell -a 'kolla/tools/cleanup-images'
+ 2023  ansible all -s -m shell -a 'stop docker'
+ 2024  cd kolla/
+ 2025  vi host
+ 2026  cd
+ 2027  ls
+ 2028  vi host 
+ 2029  vi install.yml 
+ 2030  pwd
+ 2031  vi /home/manjeet/host
+ 2032  ansible-playbook install.yml 
+ 2033  ssh manjeet86149
+ 2034* ansible all -s -m shell -a 'koll'
+ 2035  ssh manjeet86149
+ 2036  lxc-ls
+ 2037  lxc-attach -n rpc-prep
+ 2038  vi /etc/hosts
+ 2039  vi /etc/ansible/hosts 
+ 2040  cd kolla/ansible/inventory/
+ 2041  vi multinode 
+ 2042  cd
+ 2043  vi /etc/ansible/hosts 
+ 2044  ansible all -s -m shell -a 'kolla/tools/cleanup-containers -f'
+ 2045  ansible all -s -m shell -a 'sudo reboot' && sleep 300 && ansible all -s -m shell -a 'mount --make-shared /run'
+ 2046  ansible all -s -m shell -als'
+ 2047  ansible all -s -m shell 'ls'
+ 2048  ansible all -s -m shell -a 'ls'
+ 2049  ansible all -s -m shell -a 'mount --make-shared /run'
+ 2050  cd kolla/
+ 2051  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 2052  ansible all -s -m shell -a 'docker stop nova_libvirt'
+ 2053  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 2054  ssh manjeet86094
+ 2055  ansible all -s -m shell -a 'service stop libvirt-bin'
+ 2056  ansible all -s -m shell -a 'service libvirt-bin stop'
+ 2057  tools/kolla-ansible -i ansible/inventory/multinode prechecks
+ 2058  time tools/kolla-ansible -i ansible/inventory/multinode deploy
+ 2059  tools/kolla-ansible post-deploy
+ 2060  source /etc/kolla/admin-openrc.sh 
+ 2061  ping proxy-us.intel.com
+ 2062  ping proxy-us.intel.com:911
+ 2063  ping http://proxy-us.intel.com:911
+ 2064  vi /etc/kolla/passwords.yml 
+ 2065  openstack role create _member_
+ 2066  ls
+ 2067  neutron net-ip-availability-list
+ 2068  vi /etc/kolla/passwords.yml 
+ 2069  cd
+ 2070  cd kolla/
+ 2071  ls
+ 2072  cd tools/
+ 2073  ls
+ 2074  ./set_image.sh 
+ 2075  history > 09
