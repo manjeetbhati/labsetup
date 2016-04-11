@@ -1,0 +1,6 @@
+1. On controller node (stack@manjeet86149):
+
+1.1 devstack.sh to start the multiple node enviornment
+1.2 Appending "NUMATopologyFilter,AggregateInstanceExtraSpecsFilter" to the /etc/nova/nova.conf, scheduler_default_filters.
+1.3 screen -r stack, select the nova-scheduler, and restart it.
+
